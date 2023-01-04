@@ -1,0 +1,164 @@
+@include media-breakpoint-down(xl) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: all 0.3s;
+    }
+
+
+
+    .editField {
+        padding: 20px;
+    }
+
+    .card-list {
+        columns: 3;
+    }
+
+    .topbar .menuBtn,
+    .topbar.sticky .menuBtn {
+        color: #fff;
+    }
+
+    .topbar {
+        padding: 6px 15px;
+        background-color: rgba(74, 20, 72, 0.9);
+    }
+
+    .topbar.sticky {
+        padding: 6px 15px;
+    }
+
+    .topbar .user-info .userName i,
+    .topbar .user-info .userName {
+        color: #fff;
+    }
+
+    .card-main .headerCTA .tabs-link {
+        width: auto;
+        margin: 0;
+        margin-left: auto;
+    }
+
+    .topbar .user-info i {
+        color: #fff;
+    }
+
+    .topbar .formSearch .form-control {
+        color: #fff;
+        border-color: #fff;
+    }
+
+    .topbar .formSearch .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .topbar .formSearch i {
+        color: #fff;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .contentCardWrapper {
+        height: auto !important;
+    }
+
+    .filedList li{
+        padding-right:50px;
+    }
+    .filedList li .cta-delete{
+        right: 0;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .topbar .user-info~.dropdown-menu {
+        min-width: 200px;
+    }
+
+    .card-main .headerCTA .employeCTA {
+        margin: 0 -5px;
+    }
+
+    .card-main .headerCTA .tabs-link {
+        margin-left: 0;
+        justify-content: flex-end;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+
+    .topbar {
+        padding: 6px 0;
+    }
+
+    .main {
+        padding-top: 125px;
+    }
+
+    .card-list {
+        columns: 2;
+    }
+
+    .contentCardWrapper .innerContent {
+        padding: 0 0;
+    }
+
+    .login-main .card-login .card-inner-content {
+        padding: 30px 20px;
+    }
+
+    .login-main {
+        padding: 60px 0;
+    }
+
+
+}
+
+@include media-breakpoint-down(sm) {
+    .card-user .media {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-user .media .media-body {
+        padding: 10px 0 0;
+    }
+
+    .card-user .media .media-body h3,
+    .card-user .media .media-body p {
+        text-align: center;
+    }
+
+    .custom-table .table {
+        width: 800px;
+    }
+
+    .editField li {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .editField li .fieldLabel {
+        flex: inherit;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .editField li .form-field {
+        width: 100%;
+    }
+
+    .editField {
+        padding: 15px;
+    }
+
+    .card-list {
+        columns: 1;
+    }
+
+    .login-main .card-login .card-inner-content {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,41 @@
+.custom-table {
+    .table > :not(:first-child) {
+        border: none;
+    }
+
+   &.inactive{
+    .table {
+        tr{
+            th:nth-child(2),
+            th:nth-child(3){
+                width: 400px;
+            }
+        }
+    }
+    }
+}
+
+.card-table {
+    height: calc(100vh - 240px);
+    border-radius: 20px;
+    @extend .filter-primary;
+    padding: 20px;
+    overflow-y: auto;
+    .table {
+        thead {
+            tr {
+                th {
+                    @include Poppins(500);
+                    font-size: $font18;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+
+
+.messageBody {
+    margin-top: 30px;
+}

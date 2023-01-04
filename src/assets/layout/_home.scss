@@ -1,0 +1,209 @@
+.card-main {
+    padding: 15px 0;
+
+    .card-table {
+        margin-top: 30px
+    }
+
+    h3 {
+        @include Poppins(700);
+        font-size: $font24;
+        color: $black;
+        margin-bottom: 24px;
+    }
+
+    .flow {
+        position: relative;
+
+        .cta-list {
+            display: flex;
+            align-items: center;
+
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            .cta-delete {
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                border: none;
+                color: $white;
+                background-color: $pink-100;
+                margin-right: 6px;
+                opacity: 0.5;
+                transition: all 0.3s;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .checkbox-style {
+            +label {
+                margin: 0;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+
+                    .circle {
+                        stroke: 1px solid transparent !important;
+
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    margin: 0;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    background: $pink-100;
+                    transition: all 0.3s;
+                    opacity: 0.5;
+                }
+            }
+
+            &:checked {
+                +label {
+                    background-color: $pink-100;
+                    opacity: 1;
+
+                    .path {
+                        stroke-dasharray: 1000;
+                        stroke-dashoffset: 0;
+                        stroke: $orange-primary;
+
+                        &.circle {
+                            -webkit-animation: dash 0.9s ease-in-out;
+                            animation: dash 0.9s ease-in-out;
+                            stroke: $pink-100 !important;
+                        }
+
+                        &.line {
+                            stroke-dashoffset: 1000;
+                            -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+                            animation: dash 0.9s 0.35s ease-in-out forwards;
+                        }
+
+                        &.check {
+                            stroke: $white;
+                            stroke-dashoffset: -100;
+                            -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+                            animation: dash-check 0.9s 0.35s ease-in-out forwards;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        &:hover {
+            .cta-list {
+                .cta-delete {
+                    opacity: 1;
+                }
+            }
+
+            .checkbox-style {
+                + {
+                    label {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.card-list {
+    // display: flex;
+    // flex-wrap: wrap;
+    margin: 0 0;
+
+    li {
+        padding: 0 0;
+    }
+}
+
+.bcard-2 {
+    position: relative;
+    width: 304.92px;
+    height: 504px;
+    background: transparent;
+
+}
+
+.mediaTestList {
+    .media {
+        display: flex;
+        align-items: center;
+        background-color: #f7f7f7;
+        border-radius: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+        .avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-image: url(../images/placeholder-profile.png);
+            background-size: cover;
+            background-position: center;
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                @include border-radius(50%);
+            }
+        }
+        .cta-delete{
+            border: none;
+            color: $white;
+            background: $pink-100;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            margin-left: 10px;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.mediaTestscroll{
+    max-height: calc(100vh - 311px);
+    margin: 15px 0;
+}
+.contentCardWrapper {
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+
+    .innerContent {
+        padding: 0 15px;
+    }
+}

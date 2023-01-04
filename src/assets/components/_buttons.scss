@@ -1,0 +1,128 @@
+.btn {
+    height: 50px;
+    border-radius: 10px;
+    @extend .d-flex,
+    .align-items-center,
+    .justify-content-center;
+    border: none;
+    min-width: 100px;
+
+    &.btn-dark {
+        color: $white;
+        background: $black;
+        border-color: $black;
+
+        &:hover {
+            color: $white;
+            border-color: $pink-100;
+            background: $pink-100;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &.cta-secondary {
+        color: $orange-primary;
+        background: $orange-300;
+
+        i {
+            margin-right: 4px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &.cta-primary {
+        color: $white;
+        background: $pink-100;
+
+        i {
+            margin-right: 4px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &:hover {
+            background-color: $orange-primary;
+
+            color: $white;
+        }
+    }
+}
+
+
+.cta-icon-small {
+    display: inline-flex;
+    align-items: center;
+
+    span {
+        margin-right: 20px;
+        font-size: 18px;
+        text-align: left;
+        color: #000;
+
+    }
+
+    i {
+        width: 32px;
+        height: 32px;
+        @extend .d-flex,
+        .align-items-center,
+        .justify-content-center;
+        @include border-radius(50%);
+        background-color: $pink-100;
+        color: $white;
+        box-shadow: 4px 3px 15px -3px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s;
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        &:hover{
+            background: $pink-dark;
+        }
+    }
+
+  
+
+}
+
+
+
+.menuBtn {
+    background-color: transparent;
+    border: none;
+    color: $primary;
+    margin-left: 0;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.openMenu{
+    overflow: hidden;
+    .sidebar{
+        transform: translate(0);
+    }
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 5;
+
+    }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="cards" transform="translate(0.074)">
+    <path id="Path_138" data-name="Path 138" d="M-.074,0h28V28h-28Z" fill="none"/>
+    <g id="cards-2" data-name="cards">
+      <rect id="Rectangle_223" data-name="Rectangle 223" width="20" height="15" rx="2" transform="translate(21 4) rotate(90)" fill="none" stroke="#f76588" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_93" data-name="Line 93" transform="translate(8.793 7)" fill="none" stroke="#f76588" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_94" data-name="Line 94" transform="translate(18.126 21)" fill="none" stroke="#f76588" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_139" data-name="Path 139" d="M3.693,9.847,0,4.923,3.693,0,7.385,4.923Z" transform="matrix(0.656, 0.755, -0.755, 0.656, 15.081, 7.779)" fill="none" stroke="#f76588" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

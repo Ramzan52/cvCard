@@ -1,0 +1,289 @@
+label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+.checkbox-style {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkbox-style + label {
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+
+  @extend .d-flex, .align-items-center;
+  cursor: pointer;
+}
+
+.checkbox-style + label:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid $black;
+  @extend .d-flex, .align-items-center, .justify-content-center;
+  margin-right: 10px;
+  padding: 6px 0 0;
+}
+
+.checkbox-style:checked + label:before {
+  content: url('https://api.iconify.design/bi/check.svg?color=white');
+  background-color: $pink-100;
+  border: 1px solid $pink-100;
+}
+
+input.form-select,
+input.form-control {
+  height: 50px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid $black;
+}
+
+.form-control:focus {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid $black;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  + label {
+    width: 153px;
+    height: 164px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/bg-label.png);
+    color: $white;
+    flex-direction: column;
+    cursor: pointer;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.switch-style-1 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  + label {
+    width: 200px;
+    height: 52px;
+    background: transparent;
+    border: 1px solid $black;
+    @include border-radius(26px);
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    .text {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 5;
+    }
+    .bg {
+      @include border-radius(26px);
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      background-color: $pink-100;
+      transition: all 0.3s;
+    }
+    .active {
+      color: $white;
+    }
+  }
+  &:checked {
+    + label {
+      .bg {
+        transform: translateX(100%);
+      }
+
+      .block {
+        color: $white;
+      }
+      .active {
+        color: $black;
+      }
+    }
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 5555;
+}
+
+.icon-field {
+  position: relative;
+  z-index: 99;
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 15px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.checkbox-style-rounded {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  + label {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $pink-100;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    @include border-radius(50%);
+    cursor: pointer;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &:checked {
+    + label {
+      background-color: $pink-100;
+      .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        stroke: transparent;
+        &.circle {
+          -webkit-animation: dash 0.9s ease-in-out;
+          animation: dash 0.9s ease-in-out;
+        }
+        &.line {
+          stroke-dashoffset: 1000;
+          -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+          animation: dash 0.9s 0.35s ease-in-out forwards;
+        }
+        &.check {
+          stroke: $white;
+          stroke-dashoffset: -100;
+          -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+          animation: dash-check 0.9s 0.35s ease-in-out forwards;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+.file-upload {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 0px;
+}
+
+.drop-card {
+  border: 2px solid $black;
+  border-style: dashed;
+  @include border-radius(5px);
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  p {
+    margin: 0;
+    font-size: $font16;
+    color: $black;
+    text-align: center;
+    label {
+      color: $Lilac;
+      margin-left: 5px;
+      cursor: pointer;
+      span {
+        color: $pink-100;
+      }
+    }
+
+    &.note {
+      font-size: $font14;
+      color: $text-gray-90;
+    }
+  }
+}
+
+.form-field {
+  .css-1s2u09g-control {
+    background-color: transparent;
+    border-color: $black;
+    border-radius: 9px;
+  }
+  .css-1okebmr-indicatorSeparator {
+    display: none;
+  }
+
+  .css-6j8wv5-Input {
+    height: 44px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.has-error label {
+  color: red;
+}
+
+.has-error input,
+.has-error input:focus {
+  border-color: red;
+}

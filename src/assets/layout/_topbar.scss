@@ -1,0 +1,134 @@
+.topbar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 12;
+    padding-right: 40px;
+    transition: all 0.3s;
+    padding-left: 290px;
+    &.sticky {
+        background-color: rgba(74, 20 ,72,0.9);
+        padding: 12px 0;
+
+        padding-left: 290px;
+        .form-control {
+            border-color: $white;
+            border-color: $white;
+            color: $white;
+            &::placeholder{
+                
+            color: $white;
+            }
+        }
+
+        .formSearch {
+            i {
+                color: $white;
+            }
+        }
+
+        .user-info {
+            color: $white;
+            .userName {
+                color: $white;
+            }
+        }
+    }
+    .formSearch{
+        position: relative;
+        min-width: 336px;
+        .form-control{
+            padding-left: 53px;
+        }
+        i{
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-50%);
+            left: 16px;
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .user-info{
+        @extend .d-flex,.align-items-center;
+        background-color: transparent;
+        border: none;
+        .avatar{
+            width: 54px;
+            height: 54px;
+            background: #fff;
+            border: 3px solid $pink-100;
+            padding: 3px;
+            @include border-radius(50%);
+            background-image: url(../images/placeholder-profile.png);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
+        .userName{
+            font-size: $font18;
+            text-align: right;
+            color: $gray-dark;
+            padding: 0 17px;
+            @include media-breakpoint-down(sm) { 
+                    display: none;
+                }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include border-radius(50%);
+            }
+        }
+        i{
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        ~.dropdown-menu{
+            min-width: 280px;
+            border: none;
+            margin-top: 10px !important;
+            background-color: $primary;
+            @include border-radius(10px);
+            padding: 15px;
+            button,
+            a{
+                padding:6px 15px;
+                display: flex;
+                align-items: center;
+                color: $white;
+                background-color: transparent;
+                border: none;
+                &:hover{
+                    color: $pink-100;
+                }
+            }
+            li{
+                &:last-child{
+                    a{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

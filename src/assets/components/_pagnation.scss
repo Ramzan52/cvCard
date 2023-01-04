@@ -1,0 +1,52 @@
+.pagination {
+    padding: 30px 0;
+
+    li {
+        margin: 0 4px;
+
+        button,
+        a {
+            width: 35px;
+            height: 35px;
+            @include border-radius(50%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $pink-100;;
+            color: $pink-100;;
+            &.active,
+            &:hover{
+                background-color: $pink-100;;
+                color: $white;
+                box-shadow: 4px 3px 15px -3px rgba(0, 0, 0, 0.25);
+            }
+        }
+
+        &.next,
+        &.prev {
+            a ,
+            button{
+                background-color: $black;
+                color: $white;
+                border-color: $black;
+                svg {
+                    width: 22px;
+                    height: 22px;
+                }
+                &:hover{
+                background-color: $pink-100;;
+                color: $white;
+                border-color: $pink-100;;
+                }
+            }
+        }
+
+        &.disabled{
+            a{
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        }
+
+    }
+}

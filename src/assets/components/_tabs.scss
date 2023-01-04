@@ -1,0 +1,30 @@
+.tabs-link {
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+    border: none;
+    li {
+        padding: 0 5px;
+        a,
+        .btn {
+            border-radius: 15px;
+            @include border-radius(25px);
+            @include Poppins(500);
+            font-size: $font16;
+            color: $text-gray;
+            padding: 4px 18px;
+            height: auto;
+            &.active {
+                color: $white;
+                background-color: $orange-primary;
+            }
+            &:hover {
+                color: $white;
+                background-color: $orange-primary;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}

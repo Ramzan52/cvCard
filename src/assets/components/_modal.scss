@@ -1,0 +1,311 @@
+.modal-profile {
+  .modal-dialog {
+    max-width: 600px;
+
+    .modal-content {
+      border: none;
+      // @extend .filter-primary;
+      @include border-radius(25px);
+    }
+  }
+
+  .modal-header {
+    border: none;
+    padding: 20px 30px;
+
+    .modal-title {
+      @include Poppins(700);
+      font-weight: 700;
+      font-size: 28px;
+      text-align: left;
+      color: $black;
+    }
+  }
+
+  .modal-body {
+    padding: 0 30px;
+
+    .avatar-upload {
+      margin-bottom: 20px;
+    }
+  }
+
+  .modalFooter {
+    padding: 0 30px 20px;
+  }
+}
+
+.avatar-upload {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid $orange-100;
+  position: relative;
+  background: #fd9f92;
+
+  span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("https://api.iconify.design/carbon/user.svg?color=white")
+      no-repeat center center / contain;
+    border: 2px solid $white;
+    border-radius: 50%;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .uploadImg {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+
+    + label {
+      margin: 0;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      bottom: 0;
+      right: 0;
+      background: #fc9a8c;
+      color: $dark;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 2px solid #fc9a8c;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.fileUpload {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+#editField {
+  .modal-dialog {
+    overflow: hidden;
+  }
+
+  .modal-content {
+    overflow-y: auto;
+
+    .modal-body {
+      overflow: hidden;
+    }
+  }
+}
+
+.uploadImg {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-modal {
+  overflow: hidden;
+
+  .modal-profile {
+    opacity: 1;
+
+    &.modal {
+      display: block;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.alert-bg {
+  background-color: rgba(249, 128, 111, 0.3);
+  color: #f9806f;
+  font-weight: 500;
+}
+
+.employeesModal {
+  height: 100%;
+
+  .modal-dialog {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    .mediaList {
+      max-height: calc(100vh - 234px);
+      overflow-y: auto;
+      padding: 10px 20px;
+    }
+
+    ul {
+      li {
+        display: flex;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+
+        &:last-of-type {
+          border: none;
+        }
+
+        .media-body {
+          flex: 1;
+          display: flex;
+
+          .images-avatar {
+            margin-right: 15px;
+            width: 80px;
+            height: 80px;
+            @include border-radius(50%);
+            border: 1px solid $pink-100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../../assets/images/placeholder-profile.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+            .uploadImg {
+              + {
+                label {
+                  margin: 0;
+                  position: absolute;
+                  width: 35px;
+                  height: 35px;
+                  background-color: $pink-100;
+                  @include border-radius(50%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  bottom: 0;
+                  right: 0;
+                  color: $white;
+
+                  svg {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .name {
+            flex: 1;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .email {
+          display: flex;
+          align-items: center;
+          width: 65%;
+        }
+      }
+    }
+
+    .btn {
+      border: none;
+      min-width: 120px;
+    }
+  }
+}
+
+.modal-backdrop {
+  + {
+    .drawerTest {
+      transform: translateX(0%) !important;
+      z-index: 9999;
+      transition: all 0.3s;
+      display: block !important;
+      padding: 0 !important;
+      .modal-dialog {
+        transition: all 0.5s;
+        transform: translateX(100%) !important;
+        .input-group {
+          .form-field {
+            flex: 1;
+            .css-1s2u09g-control {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+            .css-1pahdxg-control {
+              box-shadow: none;
+              border: 1px solid $dark;
+              @include border-radius(5px);
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        background: transparent;
+        input {
+          + {
+            label {
+              font-size: 18px;
+
+              &:before {
+                width: 22px;
+                height: 22px;
+              }
+            }
+          }
+
+          &:checked {
+            + {
+              label {
+                &::before {
+                  content: url("https://api.iconify.design/akar-icons/check.svg?color=white&width=18&height=18");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.show {
+    + {
+      .drawerTest {
+        .modal-dialog {
+          transition: all 0.3s;
+          transform: translateX(0%) !important;
+        }
+      }
+    }
+  }
+}

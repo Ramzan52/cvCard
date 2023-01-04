@@ -1,0 +1,104 @@
+.login-main {
+    min-height: 100vh;
+    background-image: url(../images/bg-body.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    @extend .d-flex, .align-items-center, .justify-content-center;
+    overflow: hidden;
+
+    .card-login {
+        max-width: 550px;
+        position: relative;
+    
+        h3 {
+            @include Poppins(700);
+            font-size: $font28;
+            text-align: left;
+            color: $black;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: $font16;
+            text-align: left;
+            color: $black;
+            margin-bottom: 30px;
+    
+        }
+   
+
+        .note {
+            margin: 16px 0 0;
+            text-align: center;
+            a {
+                color: $pink-100;
+            }
+        }  
+    .card-inner-content {
+        @include border-radius(30px);
+        @extend .filter-primary;
+        position: relative;
+        z-index: 5;
+        padding: 50px 80px;
+
+        .cta-login {
+            @extend .d-flex, .align-items-center, .justify-content-between;
+            label {
+                margin: 0;
+            }
+            a {
+                font-size: $font14;
+                text-align: left;
+                color: $black;
+                &:hover {
+                    color: $pink-100;
+                    text-decoration: underline;
+                }
+            }
+         
+        }
+    }
+
+    .blob1 {
+        position: absolute;
+        right: -228px;
+        top: -165px;
+        -webkit-animation: simple-move2 2s 2s linear infinite alternate;
+        animation: simple-move2 2s 2s linear infinite alternate;
+    }
+    .blob2 {
+        position: absolute;
+        left: -180px;
+        bottom: -180px;
+        -webkit-animation: simple-move 2s 2s linear infinite alternate;
+        animation: simple-move 2s 2s linear infinite alternate;
+    }
+}
+}
+
+
+
+
+@-webkit-keyframes simple-move {
+    100% {
+        -webkit-transform: translate(0, 20px);
+    }
+}
+
+@keyframes simple-move {
+    100% {
+        transform: translate(0, 20px);
+    }
+}
+
+@-webkit-keyframes simple-move2 {
+    100% {
+        -webkit-transform: translate(0, -20px);
+    }
+}
+
+@keyframes simple-move2 {
+    100% {
+        transform: translate(0, 20px);
+    }
+}

@@ -1,0 +1,60 @@
+.sidebar {
+    position: fixed;
+    background-color: $primary;
+    min-width: 250px;
+    height: 100vh;
+    border-radius: 0px 20px 20px 0px;
+    background: $primary;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    .brand_name {
+        text-align: center;
+        padding: 25px 10px;
+        a {
+            display: inline-flex;
+        }
+    }
+
+    .navigation-sidebar {
+        padding: 25px;
+        li {
+            margin: 5px 0;
+            a {
+                @extend .d-flex, .align-items-center, .justify-content-between;
+                color: $pink-100;
+                @include border-radius(10px);
+                padding: 10px 10px 10px 0;
+                i {
+                    @extend .d-inline-flex, .align-items-center, .justify-content-center;
+                    width: 50px;
+                }
+                span {
+                    flex: 1;
+                }
+                &.active {
+                    background: linear-gradient(#fd4fa7 0%, #f9668f 100%);
+                    color: $white;
+                    i {
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar {
+    @include media-breakpoint-down(xl) {
+        transform: translateX(-100%);
+    }
+}
+
+.open_menu{
+    @include media-breakpoint-down(xl) {
+        .sidebar {
+        transform: translateX(0%);
+        }
+    }
+}

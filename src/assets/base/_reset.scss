@@ -1,0 +1,217 @@
+body {
+  @include Poppins(400);
+  font-size: 16px;
+  line-height: 1.4;
+  min-height: 100vh;
+  background-image: url(../images/bg-body.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: $pink-100;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color:$pink-100;
+  border-radius: 6px;
+  border: 3px solid $pink-100;
+}
+
+
+
+#detailDrawer
+.modal-body::-webkit-scrollbar {
+  width: 0;
+}
+#detailDrawer
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#detailDrawer
+.modal-body::-webkit-scrollbar-thumb {
+  background-color:$pink-100;
+  border-radius: 6px;
+  border: 3px solid $pink-100;
+}
+
+
+   /* custom scrollbar */
+   .sc-wrapper {
+    overflow : hidden;
+    height   : 100%;
+    position : relative;
+    z-index  : 1;
+    float: left;
+}
+
+
+
+
+
+
+
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+  outline: 0 !important;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.main{
+    width: calc(100% - 250px);
+    margin-left: auto;
+    padding: 96px 40px 0;
+    min-height: 100vh;
+    @include media-breakpoint-down(xl){
+      width: calc(100% - 0px);
+      padding: 100px 20px 0;
+  }
+}

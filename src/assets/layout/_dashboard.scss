@@ -1,0 +1,270 @@
+.cta-status {
+    display: flex;
+    align-items: center;
+    border: none;
+
+    button {
+        border: none;
+        background-color: transparent;
+        @include Poppins(500);
+        font-size: $font16;
+        display: inline-flex;
+        padding: 6px 12px;
+        @include border-radius(17px);
+
+        &.statusActive {
+            color: $success;
+        }
+
+        &.statusInactive {
+            color: $danger;
+        }
+
+        &.statusPending {
+            color: $warning;
+        }
+
+        &.active {
+            &.statusActive {
+                background: $success-100;
+            }
+
+            &.statusInactive {
+                background-color: $danger-100;
+            }
+
+            &.statusPending {
+                background-color: $warning-100;
+            }
+
+
+        }
+    }
+}
+
+
+
+.status-active {
+    color: $success;
+}
+
+.status-inactive {
+    color: $danger;
+}
+
+.status-pending {
+    color: $warning;
+}
+
+.filedList li {
+    position: relative;
+
+    .cta-delete {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        color: $danger;
+        transform: translate(0, -50%);
+        right: -40px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $pink-100;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 4px 3px 15px -3px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s;
+        right: -60px;
+        top: 58px;
+        &.no-label {
+          top: 24px
+        }
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+        &:hover{
+
+            background-color:$pink-dark;
+        }
+    }
+}
+
+.field_add {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin-right: 20px;
+        font-size: 18px;
+        text-align: left;
+        color: #000;
+
+    }
+}
+
+
+.editField {
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .checkbox-style{
+            +label{
+                display: flex;
+                align-items: center;
+                margin: 0;
+                position: relative;
+                margin-right: 8px;
+                &:before{
+                    content: '';
+                    display: inline-flex;
+                    width: 18px;
+                    height:18px;
+                    margin: 0;
+                }
+                i{
+                    position: absolute;
+                    left: 0;
+                    top: -4px;
+                    margin: 0;
+                }
+            }
+            &:checked{
+            + label {
+                background-color: $pink-100;
+                border-radius: 0px;
+                .path {
+                    stroke-dasharray: 1000;
+                    stroke-dashoffset: 0;
+                    stroke: $orange-primary;
+                    &.circle {
+                        -webkit-animation: dash 0.9s ease-in-out;
+                        animation: dash 0.9s ease-in-out;
+                        display: none;
+                    }
+                    &.line {
+                        stroke-dashoffset: 1000;
+                        -webkit-animation: dash 0.9s 0.35s ease-in-out forwards;
+                        animation: dash 0.9s 0.35s ease-in-out forwards;
+                    }
+                    &.check {
+                        stroke: $white;
+                        stroke-dashoffset: -100;
+                        -webkit-animation: dash-check 0.9s 0.35s ease-in-out forwards;
+                        animation: dash-check 0.9s 0.35s ease-in-out forwards;
+                    }
+                }
+            }
+            }
+        }
+
+        .fieldLabel {
+            flex: 0 0 200px;
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 7px;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .form-field {
+            flex: 1;
+        }
+    }
+}
+
+
+.img-uploaded {
+    height: 200px;
+    max-height: 100%;
+    width: 200px;
+    max-width: 100%;
+    box-shadow: rgba(9, 30, 66, 20%) 0px 1px 1px, rgba(9, 30, 66, 24%) 0px 0px 1px 0px;
+    border-radius: 3px;
+    background: transparent;
+    line-height: normal;
+    position: relative;
+    transition: all 0.3s;
+    @include border-radius(10px);
+    overflow: hidden;
+
+
+    .img-holder{
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .cta-del {
+        border: none;
+        background-color: transparent;
+        top: 10px;
+        right: 10px;
+        color: $red;
+        z-index: 99;
+        position: absolute;
+        transform: translate(0, -40px);
+        transition: transform 0.3s;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+    .title {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        color: $white;
+        z-index: 99;
+        position: absolute;
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: transform 0.3s;
+        transform: translate(0, 40px);
+    }
+}
+.PhoneInput{
+    height: 50px;
+     @include border-radius(10px);
+    background: transparent;
+    border: 1px solid $dark;
+    padding: 0.375rem 0.75rem;
+    .PhoneInputCountry{
+        margin-right: 10px;
+    }
+    input{
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        &:focus{
+            box-shadow: none;
+            outline: none;
+        }
+    }
+}
+
+

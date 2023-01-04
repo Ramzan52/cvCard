@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="131" height="103.387" viewBox="0 0 131 103.387">
+  <g id="company-logo" transform="translate(-4919.999 -1375.089)">
+    <g id="Group_681" data-name="Group 681" transform="translate(4963.3 1375.089)">
+      <path id="Path_834" data-name="Path 834" d="M133.979,200.641s1.693-2.9,1.568-4.691-.214-3.756-1.283-4.821l-18.038-17.937c-1.228-1.22-2.884-1.193-4.62-1.243a6.437,6.437,0,0,0-4.32,2.14l-4.075,3.921,9.817,9.761-11.1,11.1L113.4,210.341a7,7,0,0,0,5.139,2.171,7.075,7.075,0,0,0,5.2-1.78l10.281-10.006-.069-.061Z" transform="translate(-84.906 -171.947)" fill="#ed1c24"/>
+      <path id="Path_835" data-name="Path 835" d="M112.669,181.71l-5.093-4.8L94.9,189.441a5.569,5.569,0,0,0-1.876,4.244,4.53,4.53,0,0,0,.438,2.213,8.3,8.3,0,0,0,1.576,1.9l4.55,4.55,13.324,13.318c1.059,1.059,2.995,1.142,4.787,1.276,1.8.119,4.555-1.675,4.555-1.675l-21.72-21.722Z" transform="translate(-93.026 -167.415)"/>
+    </g>
+    <text id="Lejao.pk" transform="translate(4919.999 1470.476)" fill="#ed1c24" font-size="33" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Lejao</tspan><tspan y="0" fill="#000">.pk</tspan></text>
+  </g>
+</svg>
